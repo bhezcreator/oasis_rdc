@@ -15,12 +15,17 @@ body.loading{
     height: 100vh !important;
     overflow: hidden !important;
     position: relative !important;
-/*     #6d8806
-     #3e9cb6 */
+}
+
+.hidden {
+    display: none;
+}
+.visibles {
+    display: block;
 }
 
 header{
-    background-image: linear-gradient(to bottom,  #164a34,#164a34cb, transparent), url('images/foret.jpg');
+    background-image: linear-gradient(to bottom,  #164a34,#164a34cb, transparent), url('images/FORET.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -190,6 +195,11 @@ header .titre a:hover{
     text-align: center;
     box-shadow: 7px 7px 0 #3e9cb6;
     border-radius: 10px;
+}
+
+.valeurs .block-valeurs h2 small{
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .histoire{
@@ -540,9 +550,9 @@ header .titre a:hover{
     background-color: #3e9cb61a;
     display: flex;
     justify-content: start;
-    gap: 10px;
     align-items: start;
     flex-wrap: wrap;
+    gap: 10px;
     margin-bottom: 10px;
 }
 
@@ -603,7 +613,7 @@ header .titre a:hover{
     color: #164a34;
 }
 
-.contact form input,textarea,button{
+.contact form input,textarea,button,select{
     padding: 10px;
     display: block;
     margin-bottom: 20px;
@@ -613,6 +623,17 @@ header .titre a:hover{
     color: #164a34;
     box-sizing: border-box; /* important pour padding */
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.contact form .check-declaration{
+    padding: 10px;
+    display: inline;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 5;
+    width: auto;
+    box-sizing: border-box; /* important pour padding */
 }
 
 .contact form button{
@@ -703,6 +724,10 @@ footer .foot .left img{
     border-radius: 10px;
 }
 
+footer .foot .left span{
+    max-width: 250px;
+}
+
 footer .foot .left h1{
     margin: 0;
 }
@@ -737,6 +762,29 @@ footer span{
     font-size: 14px;
     opacity: 0.8;
     margin-top: 20px;
+}
+
+
+@media (max-width: 1341px) {
+    .news-lists .news-items{
+        padding: 0;
+        gap: 0;
+    }
+
+    .news-lists .news-items img{
+        width: 100%;
+            border-left: none;
+    }
+
+    .news-lists .news-items .news-left{
+        width: 100%;
+        margin: 0;
+        padding: 10px 10px 20px;
+    }
+
+    .news-lists .news-items .news-left h2{
+        margin: 0;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -837,10 +885,23 @@ footer span{
         justify-content: center;
         padding: 100px 20px !important;
     }
+
+    .news-lists{
+        padding: 30px;
+    }
+
+    .news-lists .news-items{
+        width: 100%;
+    }
 }
 
 
 @media (max-width: 800px) {
+
+    .contact form,.contact-bloc{
+        width: 90%;
+    }
+
     .programmes .bloc-programmes .programme{
         width: 100%;
     }
@@ -858,6 +919,36 @@ footer span{
     }
 }
 
+@media (max-width: 785px) {
+    footer .foot .left{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    footer .foot .left span{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    footer .foot .left ul li{
+        text-align: center;
+    }
+
+    footer .foot .right{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    footer .foot .right p{
+        margin: 5px 0;
+    }
+}
 
 /* Btn retour */
 .scroll-btn {
@@ -937,4 +1028,47 @@ footer span{
 }
 .droite-2{
     transition-delay: .5s;
+}
+
+
+
+/* Partie loading */
+.centre-loading{
+    height: 100%;
+    width: inherit;
+    background: #164a34;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    z-index: 4000;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fondu-out{
+    display: none;
+}
+
+.centre-loading img{
+    border-radius: 50%;
+    animation: cache 10s infinite;
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 1px 1px 10px white;
+}
+
+@keyframes cache{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }

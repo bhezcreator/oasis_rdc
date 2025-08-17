@@ -1,3 +1,12 @@
+// CHARGEMENT DE LA PAGE
+document.body.classList.add('loading');
+let xx = document.querySelector('.centre-loading');
+window.addEventListener('load', ()=>{
+      xx.style.display = 'none';
+      document.body.classList.remove('loading'); // Réactive le scroll
+});
+
+
 // Bloquer la barre de nav
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
@@ -21,6 +30,7 @@ window.addEventListener('scroll', () => {
         behavior: 'smooth'
     });
 });
+
 
 // Animations des blocks
 const ratio = .1
@@ -78,4 +88,34 @@ let mobile_menu = document.querySelector('header nav .lien');
 
 btn_mobile.addEventListener('click', () => {
     mobile_menu.classList.toggle('show');
+});
+
+
+// Formulaire d'adhesion
+const bton = document.getElementById("show-form-part");
+const section1 = document.getElementById("section1");
+const section2 = document.getElementById("section2");
+    
+bton.addEventListener("click", () => {
+    const isSection2Visible = section2.classList.contains("visibles");
+
+    if (isSection2Visible) {
+        // revenir à l'état initial
+        section2.classList.remove("visibles");
+        section2.classList.add("hidden");
+
+        section1.classList.remove("hidden");
+        section1.classList.add("visibles");
+
+        bton.textContent = "Afficher le formulaire du partenaire";
+    } else {
+        // afficher section2 et cacher section1
+        section1.classList.remove("visibles");
+        section1.classList.add("hidden");
+
+        section2.classList.remove("hidden");
+        section2.classList.add("visibles");
+
+        bton.textContent = "Afficher le formulaire de membre";
+    }
 });

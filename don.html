@@ -48,12 +48,59 @@
         </div>
     </div>
 
-    <div class="contact">
+    <div class="contact reveal-1">
         <div class="contact-bloc reveal-1">
             <h5><span class="paiement">M-PSA</span><span>(+243) 838923435</span></h5>
             <h5><span class="paiement">ORANGE MONEY</span><span>(+243) 898923232</span></h5>    
             <h5><span class="paiement">AIRTEL MONEY</span><span>(+243) 998923435</span></h5>
         </div>
+
+        <form action="" method="post">
+            <h1>Soutenez nos projets humanitaires en RDC</h1>
+
+            <label for="noms">Nom et prénom / Nom de l’organisation </label>
+            <input type="text" name="noms" id="noms" placeholder="FOSDA">
+
+            <label for="adresse">Adresse</label>
+            <textarea name="adresse" id="adresse" placeholder="Votre adresse"></textarea>
+
+            <label for="phone">Téléphone / WhatsApp</label>
+            <input type="tel" name="tel" id="phone" placeholder="0893265324">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="exemple@gmail.com">
+
+            <label for="don">Type de don</label>
+            <select name="don" id="don">
+                <option value="Financier">Financier</option>
+                <option value="Matériel">Matériel</option>
+                <option value="Alimentaire">Alimentaire</option>
+                <option value="Médical">Médical</option>
+                <option value="Autre">Autre</option>
+            </select>
+            
+            <label for="montant">Montant(USD) / Valeur estimée du don </label>
+            <input type="number" name="montant" id="montant" placeholder="0.5">
+
+            <label for="mode">Mode de paiement</label>
+            <select name="mode" id="mode">
+                <option value="Espèce">Espèce</option>
+                <option value="Mobile Money">Mobile Money </option>
+                <option value="Virement bancaire">Virement bancaire</option>
+                <option value="Remise en main propre">Remise en main propre</option>
+            </select>
+
+            <label for="des">Destination du don (facultatif)</label>
+            <textarea name="des" id="des" placeholder="Destination du don..."></textarea>
+
+            <label for="check-b">
+                <input type="checkbox" name="check-b" id="check-b" class="check-declaration">
+                J’accepte que l’ONGD OASIS RDC utilise mon don conformément à ses objectifs statutaires et à ses projets prioritaires.
+            </label>
+            <br><br>
+
+            <button type="submit">Faire un don</button>
+        </form>
     </div>
 
     <div class="rendez_vous">

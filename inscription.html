@@ -73,9 +73,9 @@
 
             <div class="programme reveal-1">
                 <i class="fas fa-user"></i>
-                <h3>Membre junior </h3>
+                <h3>Membre sympathisant </h3>
                 <p>
-                    Jeunes engagés en formation.
+                    Soutient financièrement l’organisation.
                 </p>
             </div>
 
@@ -100,30 +100,113 @@
     </div>
 
     <div class="contact reveal-1">
-        <form action="" method="post">
-            <h1>Veuillez remplir ce formulaire</h1>
+        <div class="contact-bloc reveal-1">
+            <h5 style="cursor: pointer;" id="show-form-part"> Afficher le formulaire du partenaire</h5>
+        </div>
 
-            <label for="noms">Nom complet</label>
-            <input type="text" name="noms" id="noms" placeholder="Patrice NGOY">
+        <form action="" method="post" id="section1" class="visibles">
+            <h1>Rejoignez notre mission : « Solidarité, Développement et Espoir ».</h1>
+
+            <label for="noms">Nom et prénom </label>
+            <input type="text" name="noms" id="noms" placeholder="NGOY Patrice ">
+
+            <label for="noms" for="sexe">Sexe</label>
+            <select name="sexe" id="sexe">
+                <option value="Femme">Femme</option>
+                <option value="Homme">Homme</option>
+            </select>
 
             <label for="date">Date de naissance</label>
             <input type="date" name="date" id="date">
+
+            <label for="nate">Nationalité</label>
+            <input type="text" name="nate" id="nate" placeholder="Nationalité">
             
-            <label for="phone">Téléphone</label>
+            <label for="adresse">Adresse</label>
+            <textarea name="adresse" id="adresse" placeholder="Votre adresse"></textarea>
+
+            <label for="phone">Téléphone / WhatsApp</label>
             <input type="tel" name="tel" id="phone" placeholder="0893265324">
 
             <label for="email">Email</label>
             <input type="email" name="email" id="email" placeholder="exemple@gmail.com">
 
-            <label for="message">Motivations et compétences</label>
-            <textarea name="description" id="description" placeholder="Parlez..." rows="10"></textarea>
+            <label for="pre">Profession / Occupation actuelle </label>
+            <input type="text" name="pre" id="pre" placeholder="Votre profession actuelle">
+
+            <label for="membre">Type de membre</label>
+            <select name="membre" id="membre">
+                <option value="Membre actif">Membre actif</option>
+                <option value="Membre sympathisant">Membre sympathisant</option>
+            </select>
+
+            <label for="motivation">Motivation pour rejoindre l’ONG </label>
+            <textarea name="motivation" id="motivation" placeholder="Parlez..." rows="4"></textarea>
             
+            <label for="piece">Pièce d’identité (à joindre : CNI, Passeport…) </label>
+            <input type="file" name="piece" id="piece">
+
+            <hr>
+            <h4>Paiement des droits d’adhésion </h4>
+            
+            <label for="montant">Montant (USD)</label>
+            <input type="number" name="montant" id="montant" placeholder="0.5">
+
+            <label for="mode">Mode de paiement</label>
+            <select name="mode" id="mode">
+                <option value="Espèce">Espèce</option>
+                <option value="Mobile Money">Mobile Money </option>
+                <option value="Virement bancaire">Virement bancaire</option>
+            </select>
+
+            <hr>
+            <label for="check-b">
+                <input type="checkbox" name="check-b" id="check-b" class="check-declaration">
+                Je certifie sur l’honneur que les informations fournies sont exactes et m’engage à respecter les Statuts et le Règlement intérieur de l’ONGD OASIS RDC.
+            </label>
+            <br><br>
+
+            <button type="submit">Soumettre la demande</button>
+        </form>
+
+        <form action="" method="post" id="section2" class="hidden">
+            <h1>Construisons ensemble un avenir meilleur.</h1>
+
+            <label for="noms">Nom complet / Nom de l’organisation </label>
+            <input type="text" name="noms" id="noms" placeholder="POSAF... ">
+
+            <label for="sec">Secteur d’activité  </label>
+            <input type="text" name="sec" id="sec" placeholder="Secteur...">
+
             <label for="adresse">Adresse</label>
             <textarea name="adresse" id="adresse" placeholder="Votre adresse"></textarea>
 
-            <!--   <label for="check-b" style="display: inline;">
-                <input type="checkbox" name="check-b" id="check-b" style="display: inline;"> J'accepte les conditions
-            </label> -->
+            <label for="phone">Téléphone / WhatsApp</label>
+            <input type="tel" name="tel" id="phone" placeholder="0893265324">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="exemple@gmail.com">
+
+            <label for="parte">Type de partenariat souhaité</label>
+            <select name="parte" id="parte">
+                <option value="Appui financier">Appui financier</option>
+                <option value="Appui matériel">Appui matériel</option>
+                <option value="Expertise technique / Formation">Expertise technique / Formation</option>
+                <option value="Autre">Autre</option>
+            </select>
+
+            <label for="descrip">Description du partenariat proposé </label>
+            <textarea name="descrip" id="descrip" placeholder="Décrivez..." rows="4"></textarea>
+
+            <label for="duree">Durée prévue</label>
+            <input type="text" name="duree" id="duree" placeholder="Ex.: 1an">
+
+            <label for="check-b">
+                <input type="checkbox" name="check-b" id="check-b" class="check-declaration">
+                Je confirme ma volonté de collaborer avec l’ONGD OASIS RDC dans le respect mutuel et conformément aux objectifs fixés.
+            </label>
+            <br><br>
+
             <button type="submit">Soumettre la demande</button>
         </form>
     </div>
