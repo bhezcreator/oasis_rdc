@@ -37,6 +37,7 @@ header{
     justify-content: start;
     align-items: center;
     flex-direction: column;
+    
 }
 
 header nav{
@@ -1029,8 +1030,6 @@ footer span{
 .droite-2{
     transition-delay: .5s;
 }
-
-
 
 /* Partie loading */
 .centre-loading{
